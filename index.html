@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wielkopolski Klaster Teleinformatyczny</title>
+  <meta name="description" content="Wielkopolski Klaster Teleinformatyczny — łączymy firmy IT z Wielkopolski. Poznaj nasz zakres działalności, członków i dowiedz się, jak dołączyć.">
+  <meta name="theme-color" content="#03c4d9">
+  <link rel="stylesheet" href="style.css">
+  <!-- dodać ikonę strony -->
+</head>
+<body>
+
+  <!-- Ikony (sprite SVG) — użycie: <svg class="icon"><use href="#i-nazwa"/></svg> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 8 8 6 8-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="M19 16v4M17 18h4"/></symbol>
+    <symbol id="i-ai" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2.5"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3M9.5 14.5 12 9.5l2.5 5M10.5 13.2h3"/></symbol>
+    <symbol id="i-data" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16"/><path d="M8 16v-4M12 16V8M16 16v-6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.3 3 7.7 7 9.5 4-1.8 7-5.2 7-9.5V6l-7-3Z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+    <symbol id="i-medtech" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M12 8v8M8 12h8"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3 5 13.5h6L10 21l8-10.5h-6L13 3Z"/></symbol>
+    <symbol id="i-orbit" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="9.5" ry="4" transform="rotate(-30 12 12)"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18a4 4 0 0 1-.6-7.96A5.5 5.5 0 0 1 17 9.5a4.2 4.2 0 0 1 .5 8.5H7Z"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M11 7.2 6.2 15.8M13 7.2l4.8 8.6M7.5 18h9"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5.5 9.3A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-2.7L14 9V3"/><path d="M7.5 15h9"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.2"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><circle cx="17" cy="9.5" r="2.5"/><path d="M17.5 14.6c2.2.2 3.8 1.9 3.8 4.4"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M7 3h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/><path d="M14 3v5h5M8.5 13h7M8.5 17h5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7.5 11 12 15.5 16.5 11M5 20h14"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><rect x="5" y="3.5" width="10" height="17" rx="1.5"/><path d="M15 9h4v11.5h-4M8.5 8h3M8.5 12h3M8.5 16h3"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="3"/><circle cx="9" cy="10" r="1.6"/><path d="m4 17 5-4.5 3.5 3L15.5 13 20 17"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".8"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#tresc">Przejdź do treści</a>
+
+  <!--MENU-->
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="wklaster.pl — strona główna">
+        <picture>
+          <source srcset="assets/logo.webp" type="image/webp">
+          <img src="assets/logo.png" alt="wklaster.pl — Wielkopolski Klaster Teleinformatyczny" width="364" height="92">
+        </picture>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+        <svg class="icon icon--open" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icon icon--close" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+
+      <nav class="nav" id="site-nav" aria-label="Menu główne">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#o-klastrze">O klastrze</a></li>
+          <li><a class="nav__link" href="#dzialalnosc">Działalność</a></li>
+          <li><a class="nav__link" href="#czlonkowie">Członkowie</a></li>
+          <li><a class="nav__link" href="#dolacz">Dołącz do nas</a></li>
+          <li><a class="nav__link" href="#do-pobrania">Do pobrania</a></li>
+          <li><a class="nav__link" href="#kontakt">Kontakt</a></li>
+        </ul>
+        <a class="btn btn--ai btn--sm nav__ai" href="https://demo.raggy.pl/login" target="_blank" rel="noopener noreferrer">
+          <svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg>
+          Asystent AI
+          <span class="sr-only">(otwiera się w nowej karcie)</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="tresc">
+
+    <!--O KLASTRZE-->
+    <section id="o-klastrze" aria-labelledby="h-klaster">
+      <div class="hero">
+        <div class="container">
+          <div class="hero__grid">
+            <div>
+              <span class="pill">Wielkopolski Klaster Teleinformatyczny</span>
+              <h1 id="h-klaster">Łączymy firmy IT <span class="mark">z&nbsp;Wielkopolski</span></h1>
+              <p class="hero__lead">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perspiciatis cum sapiente ipsa officia labore nam, vitae aut nobis minus minima atque. Aliquid, quae aut delectus quam nam provident temporibus.
+              </p>
+              <div class="cta-row">
+                <a class="btn btn--primary" href="czlonkowie.html">Zobacz członków <svg class="icon icon--shift" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+                <a class="btn btn--dark" href="#dolacz">Dołącz do klastra</a>
+                <a class="btn btn--ghost" href="#do-pobrania">Pobierz strategię</a>
+              </div>
+            </div>
+
+            <!-- grafika -->
+            <div class="hero__visual" aria-hidden="true">
+              <svg viewBox="0 0 460 440" focusable="false">
+                <!-- linie od centrum -->
+                <path class="net-line" d="M230 220 230 70M230 220 360 145M230 220 360 295M230 220 230 370M230 220 100 295M230 220 100 145"/>
+                <!-- linie między satelitami -->
+                <path class="net-line net-line--faint" d="M230 70 360 145 360 295 230 370 100 295 100 145 230 70Z"/>
+                <path class="net-line net-line--faint" d="M360 145 410 60M100 145 50 60M360 295 420 390M100 295 40 380"/>
+                <!-- aureole -->
+                <circle class="net-halo" cx="230" cy="70" r="36"/>
+                <circle class="net-halo" cx="360" cy="145" r="36"/>
+                <circle class="net-halo" cx="360" cy="295" r="36"/>
+                <circle class="net-halo" cx="230" cy="370" r="36"/>
+                <circle class="net-halo" cx="100" cy="295" r="36"/>
+                <circle class="net-halo" cx="100" cy="145" r="36"/>
+                <!-- węzły -->
+                <circle class="net-node" cx="230" cy="70" r="36"/><text class="net-label" x="230" y="70">AI</text>
+                <circle class="net-node" cx="360" cy="145" r="36"/><text class="net-label" x="360" y="145">Nauka</text>
+                <circle class="net-node" cx="360" cy="295" r="40"/><text class="net-label" x="360" y="295">Energetyka</text>
+                <circle class="net-node" cx="230" cy="370" r="36"/><text class="net-label" x="230" y="370">Finanse</text>
+                <circle class="net-node" cx="100" cy="295" r="36"/><text class="net-label" x="100" y="295">Partnerzy</text>
+                <circle class="net-node" cx="101" cy="145" r="40"/><text class="net-label" x="100" y="145">Laboratoria</text>
+                <circle class="net-node" cx="410" cy="60" r="9"/>
+                <circle class="net-node" cx="50" cy="60" r="9"/>
+                <circle class="net-node" cx="420" cy="390" r="9"/>
+                <circle class="net-node" cx="40" cy="380" r="9"/>
+                <!-- centrum -->
+                <rect class="net-node" x="176" y="166" width="108" height="108" rx="32" style="stroke-width:3"/>
+                <rect x="176" y="166" width="108" height="108" rx="32" fill="#03c4d9" fill-opacity=".1"/>
+                <image href="assets/logo_rectangles.png" x="185" y="130" width="90" height="180" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="stats" role="list" aria-label="Klaster w liczbach">
+            <div class="stat" role="listitem">
+              <div class="stat__num"><span class="count" data-count="100">100</span><span class="suffix">+</span></div>
+              <div class="stat__label">firm i instytucji w klastrze</div>
+            </div>
+            <div class="stat" role="listitem">
+              <div class="stat__num"><span class="count" data-count="20">20</span></div>
+              <div class="stat__label">lat doświadczenia</div>
+            </div>
+            <div class="stat" role="listitem">
+              <div class="stat__num"><span class="count" data-count="500">500</span><span class="suffix">+</span></div>
+              <div class="stat__label">ekspertów i specjalistów</div>
+            </div>
+            <div class="stat" role="listitem">
+              <div class="stat__num"><span class="count" data-count="15">15</span><span class="suffix">+</span></div>
+              <div class="stat__label">partnerów strategicznych</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about">
+        <div class="container">
+
+          <div class="mv">
+            <article class="mv__card mv__card--dark">
+              <span class="ibadge"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg></span>
+              <h3>Misja</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic omnis debitis rerum odio odit beatae dignissimos amet quasi vitae nobis deserunt dicta repellat provident nulla, molestiae eum cupiditate explicabo exercitationem.</p>
+            </article>
+            <article class="mv__card mv__card--light">
+              <span class="ibadge"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg></span>
+              <h3>Wizja</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus nobis fugiat magnam iure inventore aliquid earum optio, deleniti culpa iste. Soluta fuga temporibus a rem veritatis veniam error minus aliquam!</p>
+            </article>
+          </div>
+
+          <div class="history">
+            <div class="history__text">
+              <span class="eyebrow">Historia powstania</span>
+              <h3 class="section__title">Skąd się wzięliśmy</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+            </div>
+            <div class="media-ph" role="img" aria-label="Miejsce na zdjęcie lub grafikę">
+              Ewentualne zdjęcie
+            </div>
+          </div>
+
+          <h3 class="subhead">Zarząd stowarzyszenia</h3>
+          <div class="board">
+            <article class="card person"><div class="avatar" aria-hidden="true">IN</div><h4>Imię Nazwisko</h4><p>Prezes Zarządu</p></article>
+            <article class="card person"><div class="avatar" aria-hidden="true">IN</div><h4>Imię Nazwisko</h4><p>Wiceprezes Zarządu</p></article>
+            <article class="card person"><div class="avatar" aria-hidden="true">IN</div><h4>Imię Nazwisko</h4><p>Członek Zarządu</p></article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- DZIAŁALNOŚĆ -->
+    <section class="section section--soft" id="dzialalnosc" aria-labelledby="h-dzialalnosc">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Działalność i potencjał</span>
+          <h2 class="section__title" id="h-dzialalnosc">Kompetencje, które łączą biznes z technologią</h2>
+          <p class="section__lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum dicta recusandae deserunt, minima sit qui mollitia dolorum accusantium in nisi praesentium repellat modi corrupti odio harum vitae, cumque doloremque cupiditate.</p>
+        </div>
+
+        <h3 class="subhead">Kompetencje</h3>
+        <div class="grid grid--auto">
+          <article class="card card--hover tile"><span class="ibadge"><svg class="icon" aria-hidden="true"><use href="#i-data"/></svg></span><div><h3>Analiza danych</h3><p>Lorem ipsum dolor sit amet elit.</p></div></article>
+          <article class="card card--hover tile"><span class="ibadge"><svg class="icon" aria-hidden="true"><use href="#i-ai"/></svg></span><div><h3>Sztuczna inteligencja</h3><p>Sed do eiusmod tempor incididunt.</p></div></article>
+          <article class="card card--hover tile"><span class="ibadge"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span><div><h3>Cyberbezpieczeństwo</h3><p>Ut enim ad minim veniam quis.</p></div></article>
+          <article class="card card--hover tile"><span class="ibadge"><svg class="icon" aria-hidden="true"><use href="#i-medtech"/></svg></span><div><h3>Medtech</h3><p>Duis aute irure dolor in voluptate.</p></div></article>
+          <article class="card card--hover tile"><span class="ibadge"><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg></span><div><h3>Energetyka</h3><p>Excepteur sint occaecat cupidatat.</p></div></article>
+          <article class="card card--hover tile"><span class="ibadge"><svg class="icon" aria-hidden="true"><use href="#i-orbit"/></svg></span><div><h3>Sektor kosmiczny</h3><p>Nemo enim ipsam voluptatem quia.</p></div></article>
+        </div>
+
+        <h3 class="subhead">Obszary działań</h3>
+        <div class="grid grid--3">
+          <article class="card card--hover pillar">
+            <span class="pillar__num" aria-hidden="true">01</span>
+            <h3>Networking i współpraca</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium nam asperiores quae, quis illo ad magnam dolor sapiente voluptatibus est sequi, corporis ipsa consectetur eos? Praesentium nulla quisquam facilis eveniet.</p>
+          </article>
+          <article class="card card--hover pillar">
+            <span class="pillar__num" aria-hidden="true">02</span>
+            <h3>Projekty B+R</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore non in ex doloribus, quis dolores natus! Vitae, aut neque laudantium nostrum ea ab magnam, labore ullam corrupti, vero doloribus id.</p>
+          </article>
+          <article class="card card--hover pillar">
+            <span class="pillar__num" aria-hidden="true">03</span>
+            <h3>Internacjonalizacja</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque modi dicta quae unde sit exercitationem, quo accusantium iusto magni. Reprehenderit repudiandae aut odio repellendus facere odit soluta obcaecati, excepturi est?</p>
+          </article>
+        </div>
+
+        <h3 class="subhead">Partnerstwa</h3>
+
+        <div class="partners">
+          <div class="partner"><span class="partner__tag">Logo</span><span class="partner__name">Politechnika poznańska</span></div>
+          <div class="partner"><span class="partner__tag">Logo</span><span class="partner__name">UE w Poznaniu</span></div>
+          <div class="partner"><span class="partner__tag">Logo</span><span class="partner__name">Miasto Poznań</span></div>
+          <div class="partner"><span class="partner__tag">Logo</span><span class="partner__name">PCSS</span></div>
+        </div>
+
+        <h3 class="subhead">Przykłady aktywności</h3>
+        <div class="grid grid--2">
+
+          <article class="feature feature--light">
+            <svg class="icon feature__watermark" aria-hidden="true"><use href="#i-users"/></svg>
+            <span class="pill">Lorem ipsum</span>
+            <h3>Inspiracje ICT</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum aliquid, facere laborum totam optio iusto velit minima eum facilis!</p>
+            <ul class="checklist">
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Ad minus ratione dolorum, recusandae atque odio ducimus illum quod? </li>
+              <li>Assumenda repellendus accusantium eaque dignissimos asperiores animi, rem reiciendis autem atque quo!</li>
+            </ul>
+          </article>
+
+          <article class="feature feature--dark">
+            <svg class="icon feature__watermark" aria-hidden="true"><use href="#i-ai"/></svg>
+            <span class="pill">Lorem ipsum</span>
+            <h3>Fabryki AI</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quos neque amet perspiciatis ex expedita consequatur eligendi praesentium aut quam!</p>
+            <ul class="checklist">
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>In, exercitationem? Facilis impedit iure a</li>
+              <li>distinctio voluptatum iusto soluta architecto</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!--CZŁONKOWIE-->
+    <section class="section" id="czlonkowie" aria-labelledby="h-czlonkowie">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <span class="eyebrow">Członkowie</span>
+          <h2 class="section__title" id="h-czlonkowie">Firmy, które tworzą klaster</h2>
+        </div>
+
+        <!--siatka firm członkowskich. w przyszłości automatyczna aktualizacja za pomocą baserow -->
+        <div class="logo-grid">
+          <a class="logo-tile" href="https://example.com" target="_blank" rel="noopener noreferrer" aria-label="Firma 01 — strona członka (nowa karta)">
+            <span class="logo-ph">LOGO</span>
+            <svg class="icon icon--go" aria-hidden="true">
+              <use href="#i-arrow-up-right"/>
+            </svg>
+          </a>
+
+          <a class="logo-tile" href="https://example.com" target="_blank" rel="noopener noreferrer" aria-label="Firma 02 — strona członka (nowa karta)">
+            <span class="logo-ph">LOGO</span>
+            <svg class="icon icon--go" aria-hidden="true">
+              <use href="#i-arrow-up-right"/>
+            </svg>
+          </a>
+
+          <a class="logo-tile" href="https://example.com" target="_blank" rel="noopener noreferrer" aria-label="Firma 03 — strona członka (nowa karta)">
+            <span class="logo-ph">LOGO</span>
+            <svg class="icon icon--go" aria-hidden="true">
+              <use href="#i-arrow-up-right"/>
+            </svg>
+          </a>
+
+          <a class="logo-tile" href="https://example.com" target="_blank" rel="noopener noreferrer" aria-label="Firma 04 — strona członka (nowa karta)">
+            <span class="logo-ph">LOGO</span>
+            <svg class="icon icon--go" aria-hidden="true">
+              <use href="#i-arrow-up-right"/>
+            </svg>
+          </a>
+
+          <a class="logo-tile" href="https://example.com" target="_blank" rel="noopener noreferrer" aria-label="Firma 05 — strona członka (nowa karta)">
+            <span class="logo-ph">LOGO</span>
+            <svg class="icon icon--go" aria-hidden="true">
+              <use href="#i-arrow-up-right"/>
+            </svg>
+          </a>
+
+          <a class="logo-tile" href="https://example.com" target="_blank" rel="noopener noreferrer" aria-label="Firma 06 — strona członka (nowa karta)">
+            <span class="logo-ph">LOGO</span>
+            <svg class="icon icon--go" aria-hidden="true">
+              <use href="#i-arrow-up-right"/>
+            </svg>
+          </a>
+
+          <a class="logo-tile" href="https://example.com" target="_blank" rel="noopener noreferrer" aria-label="Firma 07 — strona członka (nowa karta)">
+            <span class="logo-ph">LOGO</span>
+            <svg class="icon icon--go" aria-hidden="true">
+              <use href="#i-arrow-up-right"/>
+            </svg>
+          </a>
+
+          <a class="logo-tile" href="https://example.com" target="_blank" rel="noopener noreferrer" aria-label="Firma 08 — strona członka (nowa karta)">
+            <span class="logo-ph">LOGO</span>
+            <svg class="icon icon--go" aria-hidden="true">
+              <use href="#i-arrow-up-right"/>
+            </svg>
+          </a>
+
+          <a class="logo-tile" href="https://example.com" target="_blank" rel="noopener noreferrer" aria-label="Firma 09 — strona członka (nowa karta)">
+            <span class="logo-ph">LOGO</span>
+            <svg class="icon icon--go" aria-hidden="true">
+              <use href="#i-arrow-up-right"/>
+            </svg>
+          </a>
+
+          <a class="logo-tile" href="https://example.com" target="_blank" rel="noopener noreferrer" aria-label="Firma 10 — strona członka (nowa karta)">
+            <span class="logo-ph">LOGO</span>
+            <svg class="icon icon--go" aria-hidden="true">
+              <use href="#i-arrow-up-right"/>
+            </svg>
+          </a>
+
+          <a class="logo-tile" href="https://example.com" target="_blank" rel="noopener noreferrer" aria-label="Firma 11 — strona członka (nowa karta)">
+            <span class="logo-ph">LOGO</span>
+            <svg class="icon icon--go" aria-hidden="true">
+              <use href="#i-arrow-up-right"/>
+            </svg>
+          </a>
+
+          <a class="logo-tile" href="https://example.com" target="_blank" rel="noopener noreferrer" aria-label="Firma 12 — strona członka (nowa karta)">
+            <span class="logo-ph">LOGO</span>
+            <svg class="icon icon--go" aria-hidden="true">
+              <use href="#i-arrow-up-right"/>
+            </svg>
+          </a>
+        </div>
+
+        <h3 class="subhead" id="h-kategorie">Kategorie członkostwa</h3>
+        <div class="table-wrap">
+          <table class="data-table" role="table" aria-labelledby="h-kategorie">
+            <thead role="rowgroup">
+              <tr role="row">
+                <th scope="col" role="columnheader">Kategoria Członkostwa</th>
+                <th scope="col" role="columnheader">Charakterystyka Podmiotów</th>
+                <th scope="col" role="columnheader">Rola w Ekosystemie</th>
+              </tr>
+            </thead>
+            <tbody role="rowgroup">
+              <tr role="row">
+                <th scope="row" role="rowheader">Członkowie Wspierający</th>
+                <td role="cell" data-label="Charakterystyka Podmiotów">Duże firmy (Talex, Inea, Comarch), MŚP</td>
+                <td role="cell" data-label="Rola w Ekosystemie">Finansowanie i wdrożenia rynkowe</td>
+              </tr>
+              <tr role="row">
+                <th scope="row" role="rowheader">Jednostki Badawcze</th>
+                <td role="cell" data-label="Charakterystyka Podmiotów">PCSS, Uczelnie Wyższe</td>
+                <td role="cell" data-label="Rola w Ekosystemie">Dostarczanie technologii i badań (R&amp;D)</td>
+              </tr>
+              <tr role="row">
+                <th scope="row" role="rowheader">Jednostki Samorządowe</th>
+                <td role="cell" data-label="Charakterystyka Podmiotów">Miasto Poznań</td>
+                <td role="cell" data-label="Rola w Ekosystemie">Tworzenie ram prawnych i Smart City</td>
+              </tr>
+              <tr role="row">
+                <th scope="row" role="rowheader">Członkowie Zwyczajni</th>
+                <td role="cell" data-label="Charakterystyka Podmiotów">Eksperci, Osoby fizyczne</td>
+                <td role="cell" data-label="Rola w Ekosystemie">Kapitał intelektualny i doradztwo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="center-cta">
+          <a class="btn btn--primary" href="czlonkowie.html">Zobacz pełną listę członków <svg class="icon icon--shift" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+
+    <!--DOŁĄCZ DO NAS-->
+    <section class="section section--soft" id="dolacz" aria-labelledby="h-dolacz">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Dołącz do nas</span>
+          <h2 class="section__title" id="h-dolacz">Zostań częścią ekosystemu klastra</h2>
+          <p class="section__lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad veniam alias est suscipit, necessitatibus culpa at itaque dolor ab fugit tempora vitae. Aliquid minima ratione rem et assumenda a laudantium?</p>
+        </div>
+
+        <h3 class="subhead">Korzyści z członkostwa</h3>
+        <div class="grid grid--3">
+          <article class="benefit"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><div><h3>Sieć kontaktów</h3><p>Lorem ipsum dolor sit amet, consectetur elit.</p></div></article>
+          <article class="benefit"><svg class="icon" aria-hidden="true"><use href="#i-flask"/></svg><div><h3>Wspólne projekty</h3><p>Sed do eiusmod tempor incididunt ut labore.</p></div></article>
+          <article class="benefit"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg><div><h3>Rynki zagraniczne</h3><p>Ut enim ad minim veniam, quis nostrud.</p></div></article>
+          <article class="benefit"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><div><h3>Wiarygodność</h3><p>Potwierdzenie przynależności do klastra.</p></div></article>
+          <article class="benefit"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg><div><h3>Widoczność</h3><p>Logo i link na stronie klastra.</p></div></article>
+          <article class="benefit"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg><div><h3>Wpływ na kierunek</h3><p>Duis aute irure dolor in reprehenderit.</p></div></article>
+        </div>
+
+        <h3 class="subhead">Poziomy członkostwa</h3>
+        <div class="grid grid--3">
+          <article class="card level">
+            <span class="level__name">Mini</span>
+            <div class="level__price">000 zł <small>/ rok</small></div>
+            <p class="level__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut vel atque eaque dignissimos dolor tempora, quia explicabo. Debitis, laudantium nemo dolorum natus nostrum delectus inventore, velit quia, cum repellat exercitationem.</p>
+            <ul class="checklist"><li>Lorem ipsum dolor sit</li><li>Consectetur adipiscing elit</li><li>Sed do eiusmod tempor</li></ul>
+          </article>
+          <article class="card level">
+            <span class="level__name">Średnie</span>
+            <div class="level__price">000 zł <small>/ rok</small></div>
+            <p class="level__desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugiat possimus commodi vero adipisci odio quo dolor at, saepe repudiandae ipsam dignissimos cupiditate libero consectetur cum ab facilis aliquid porro..</p>
+            <ul class="checklist"><li>Lorem ipsum dolor sit</li><li>Consectetur adipiscing elit</li><li>Sed do eiusmod tempor</li></ul>
+          </article>
+          <article class="card level">
+            <span class="level__name">Duże</span>
+            <div class="level__price">000 zł <small>/ rok</small></div>
+            <p class="level__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia doloribus voluptatem totam cumque earum tempora excepturi omnis qui nam quis magni iste vero modi eius iure sint soluta, voluptate ducimus.</p>
+            <ul class="checklist"><li>Lorem ipsum dolor sit</li><li>Consectetur adipiscing elit</li><li>Sed do eiusmod tempor</li></ul>
+          </article>
+        </div>
+
+        <h3 class="subhead">Jak dołączyć</h3>
+        <ol class="steps">
+          <li class="step"><h3>Zgłoszenie</h3><p>Pobierz i wypełnij deklarację członkowską.</p></li>
+          <li class="step"><h3>Wysyłka do Zarządu</h3><p>Wysłanie dokumentacji do Zarządu Stowarzyszenia emailem.</p></li>
+          <li class="step"><h3>Uchwała Zarządu</h3><p>Podjęcie uchwały przez Zarząd i weryfikacja formalna</p></li>
+          <li class="step"><h3>Status Członka</h3><p>Nadanie statusu członka i publikacja logo na stronie.</p></li>
+        </ol>
+
+        <div class="join-cta">
+          <div>
+            <h3>Gotowy, żeby dołączyć?</h3>
+            <p>Pobierz zgłoszenie, wypełnij je i prześlij do nas, a w razie pytań napisz.</p>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn--primary" href="#do-pobrania">Pobierz zgłoszenie <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg></a>
+            <a class="btn btn--ghost" href="mailto:info@wklaster.pl">Napisz do nas</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!--DO POBRANIA-->
+    <section class="section" id="do-pobrania" aria-labelledby="h-pobierz">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Do pobrania</span>
+          <h2 class="section__title" id="h-pobierz">Dokumenty i materiały</h2>
+          <p class="section__lead">Publicznie dostępne dokumenty stowarzyszenia.</p>
+        </div>
+
+        <div class="downloads">
+          <a class="card card--hover dl" href="#">
+            <span class="ibadge"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></span>
+            <span class="dl__title">Statut Stowarzyszenia</span>
+            <span class="dl__meta">PDF · 0,0 MB</span>
+            <span class="dl__action"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Pobierz</span>
+          </a>
+          <a class="card card--hover dl" href="#">
+            <span class="ibadge"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg></span>
+            <span class="dl__title">Strategia Rozwoju Klastra</span>
+            <span class="dl__meta">PDF · 0,0 MB</span>
+            <span class="dl__action"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Pobierz</span>
+          </a>
+          <a class="card card--hover dl" href="#">
+            <span class="ibadge"><svg class="icon" aria-hidden="true"><use href="#i-data"/></svg></span>
+            <span class="dl__title">Deklaracje członkowskie</span>
+            <span class="dl__meta">PDF · 0,0 MB</span>
+            <span class="dl__action"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Pobierz</span>
+          </a>
+          <a class="card card--hover dl" href="#">
+            <span class="ibadge"><svg class="icon" aria-hidden="true"><use href="#i-image"/></svg></span>
+            <span class="dl__title">Brand Book i logotypy klastra</span>
+            <span class="dl__meta">ZIP · 0,0 MB</span>
+            <span class="dl__action"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Pobierz</span>
+          </a>
+          <a class="card card--hover dl" href="#">
+            <span class="ibadge"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+            <span class="dl__title">Wzory papieru firmowego i szablonów prezentacji dla członków.</span>
+            <span class="dl__meta">PDF · 0,0 MB</span>
+            <span class="dl__action"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Pobierz</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!--KONTAKT-->
+    <section class="section section--soft" id="kontakt" aria-labelledby="h-kontakt">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Kontakt</span>
+          <h2 class="section__title" id="h-kontakt">Dane stowarzyszenia</h2>
+          <p class="section__lead">Dane rejestrowe możesz skopiować jednym kliknięciem.</p>
+        </div>
+
+        <div class="contact">
+          <div class="card">
+            <dl class="datalist">
+              <div class="datalist__row datalist__row--wide"><dt>Pełna nazwa</dt><dd>Stowarzyszenie Wielkopolski Klaster Teleinformatyczny</dd></div>
+              <div class="datalist__row datalist__row--wide"><dt>Adres biura</dt><dd>ul. Zwierzyniecka 20, 60-814 Poznań</dd></div>
+              <div class="datalist__row"><dt>NIP</dt><dd>7781462436</dd><button class="copy-btn" type="button" data-copy="7781462436" aria-label="Skopiuj NIP"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div>
+              <div class="datalist__row"><dt>KRS</dt><dd>0000305486</dd><button class="copy-btn" type="button" data-copy="0000305486" aria-label="Skopiuj numer KRS"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div>
+              <div class="datalist__row"><dt>REGON</dt><dd>300827291</dd><button class="copy-btn" type="button" data-copy="300827291" aria-label="Skopiuj REGON"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div>
+              <div class="datalist__row"><dt>Telefon</dt><dd><a href="tel:+48510117254">+48 510 117 254</a></dd></div>
+              <div class="datalist__row datalist__row--wide"><dt>Numer konta</dt><dd>14 1610 1133 0083 1910 2000 0001 (SGB)</dd><button class="copy-btn" type="button" data-copy="14 1610 1133 0083 1910 2000 0001" aria-label="Skopiuj numer konta"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div>
+              <div class="datalist__row datalist__row--wide"><dt>E-mail</dt><dd><a href="mailto:info@wklaster.pl">info@wklaster.pl</a></dd></div>
+            </dl>
+            <span class="sr-only" id="copy-status" role="status" aria-live="polite"></span>
+          </div>
+
+          <div class="contact__side">
+            <div class="card map-card">
+              <iframe class="map-card__frame"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2433.8994491285316!2d16.906192076820176!3d52.408498544479045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470444cb2e2461bd%3A0xe6e879a16a5bbb6b!2sZwierzyniecka%2020%2C%2060-810%20Pozna%C5%84!5e0!3m2!1spl!2spl!4v1794787937911!5m2!1spl!2spl"
+                title="Mapa: siedziba stowarzyszenia, ul. Zwierzyniecka 20, Poznań"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"></iframe>
+              <div class="map-card__info">
+                <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+                <address>ul. Zwierzyniecka 20, 60-814 Poznań</address>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!--STOPKA REJESTROWA-->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__name">Stowarzyszenie Wielkopolski Klaster Teleinformatyczny</p>
+          <p>ul. Zwierzyniecka 20, 60-814 Poznań</p>
+          <dl class="footer__reg">
+            <div><dt>NIP:</dt><dd>7781462436</dd> &nbsp;·&nbsp; <dt>REGON:</dt><dd>300827291</dd> &nbsp;·&nbsp; <dt>KRS:</dt><dd>0000305486</dd></div>
+            <div><dt>Konto:</dt><dd>14 1610 1133 0083 1910 2000 0001 (SGB)</dd></div>
+          </dl>
+          <p class="footer__court">Stowarzyszenie zarejestrowane w Sądzie Rejonowym Poznań – Nowe Miasto i Wilda w Poznaniu, VIII Wydział Gospodarczy Krajowego Rejestru Sądowego.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Nawigacja w stopce">
+          <a href="#o-klastrze">O klastrze</a>
+          <a href="#dzialalnosc">Działalność</a>
+          <a href="czlonkowie.html">Członkowie</a>
+          <a href="#dolacz">Dołącz do nas</a>
+          <a href="#do-pobrania">Do pobrania</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+      </div>
+      <p class="footer__bottom">© <span id="year">2026</span> Wielkopolski Klaster Teleinformatyczny. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
+
+
+  <script>
+    (function () {
+      var header = document.querySelector('.site-header');
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('site-nav');
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* Cień/obramowanie nagłówka po przewinięciu */
+      function onScroll() { header.classList.toggle('is-scrolled', window.scrollY > 8); }
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      /* Menu mobilne */
+      function setNav(open) {
+        nav.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+      }
+      toggle.addEventListener('click', function () {
+        setNav(toggle.getAttribute('aria-expanded') !== 'true');
+      });
+      nav.addEventListener('click', function (e) {
+        if (e.target.closest('a')) setNav(false);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { setNav(false); toggle.focus(); }
+      });
+      window.matchMedia('(min-width: 980px)').addEventListener('change', function () { setNav(false); });
+
+      /* Podświetlanie aktywnej sekcji w menu */
+      var links = Array.prototype.slice.call(document.querySelectorAll('.nav__link[href^="#"]'));
+      var map = {};
+      links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+      if ('IntersectionObserver' in window) {
+        var spy = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (!en.isIntersecting) return;
+            links.forEach(function (a) { a.removeAttribute('aria-current'); });
+            var a = map[en.target.id];
+            if (a) a.setAttribute('aria-current', 'true');
+          });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+        Object.keys(map).forEach(function (id) {
+          var s = document.getElementById(id);
+          if (s) spy.observe(s);
+        });
+      }
+
+      /* Animowane liczniki (bez animacji przy prefers-reduced-motion) */
+      var counters = document.querySelectorAll('.count[data-count]');
+      function runCounter(el) {
+        var target = parseInt(el.getAttribute('data-count'), 10);
+        var start = null, dur = 1400;
+        function step(ts) {
+          if (start === null) start = ts;
+          var p = Math.min((ts - start) / dur, 1);
+          var eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(target * eased);
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+      if ('IntersectionObserver' in window && !reduceMotion) {
+        var co = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) { runCounter(en.target); obs.unobserve(en.target); }
+          });
+        }, { threshold: .6 });
+        counters.forEach(function (c) { c.textContent = '0'; co.observe(c); });
+      }
+
+      /* Kopiowanie danych rejestrowych */
+      var status = document.getElementById('copy-status');
+      function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
+        return new Promise(function (resolve, reject) {
+          var ta = document.createElement('textarea');
+          ta.value = text; ta.setAttribute('readonly', '');
+          ta.style.position = 'fixed'; ta.style.opacity = '0';
+          document.body.appendChild(ta); ta.select();
+          try { document.execCommand('copy') ? resolve() : reject(); } catch (err) { reject(err); }
+          document.body.removeChild(ta);
+        });
+      }
+      document.querySelectorAll('.copy-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          copyText(btn.getAttribute('data-copy')).then(function () {
+            var use = btn.querySelector('use');
+            btn.classList.add('is-copied');
+            use.setAttribute('href', '#i-check');
+            status.textContent = 'Skopiowano do schowka';
+            setTimeout(function () {
+              btn.classList.remove('is-copied');
+              use.setAttribute('href', '#i-copy');
+              status.textContent = '';
+            }, 1800);
+          });
+        });
+      });
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>

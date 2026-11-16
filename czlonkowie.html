@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Członkowie — Wielkopolski Klaster Teleinformatyczny</title>
+  <meta name="description" content="Pełna lista członków Wielkopolskiego Klastra Teleinformatycznego z wyszukiwarką.">
+  <meta name="theme-color" content="#03c4d9">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%2303C4D9'/%3E%3Ctext x='16' y='23' font-size='20' font-weight='700' text-anchor='middle' fill='%230A1722' font-family='Arial'%3Ew%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ikony (sprite SVG) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="M19 16v4M17 18h4"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.3 3 7.7 7 9.5 4-1.8 7-5.2 7-9.5V6l-7-3Z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#tresc">Przejdź do treści</a>
+
+  <!--MENU-->
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="wklaster.pl — strona główna">
+        <picture>
+          <source srcset="assets/logo.webp" type="image/webp">
+          <img src="assets/logo.png" alt="wklaster.pl — Wielkopolski Klaster Teleinformatyczny" width="364" height="92">
+        </picture>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+        <svg class="icon icon--open" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icon icon--close" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+
+      <nav class="nav" id="site-nav" aria-label="Menu główne">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html#o-klastrze">O klastrze</a></li>
+          <li><a class="nav__link" href="index.html#dzialalnosc">Działalność</a></li>
+          <li><a class="nav__link" href="czlonkowie.html" aria-current="page">Członkowie</a></li>
+          <li><a class="nav__link" href="index.html#dolacz">Dołącz do nas</a></li>
+          <li><a class="nav__link" href="index.html#do-pobrania">Do pobrania</a></li>
+          <li><a class="nav__link" href="index.html#kontakt">Kontakt</a></li>
+        </ul>
+        <a class="btn btn--ai btn--sm nav__ai" href="https://demo.raggy.pl/login" target="_blank" rel="noopener noreferrer">
+          <svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg>
+          Asystent AI 
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="tresc">
+
+    <!--WYSZUKIWARKA-->
+    <section class="page-hero">
+      <div class="container">
+        <a class="back-link" href="index.html#czlonkowie">
+          <svg class="icon" aria-hidden="true">
+            <use href="#i-arrow-right"/>
+          </svg>
+          Strona główna
+        </a>
+        <h1 id="h-lista">Członkowie klastra</h1>
+        <p class="section__lead">Pełna lista firm i instytucji zrzeszonych w stowarzyszeniu</p>
+
+        <form class="search" onsubmit="return false">
+          <label class="sr-only" for="q">Szukaj członka po nazwie</label>
+          <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+          <input id="q" type="search" placeholder="Szukaj po nazwie firmy…" autocomplete="off" spellcheck="false">
+        </form>
+      </div>
+    </section>
+
+    <!--LISTA CZŁONKÓW-->
+    <section class="members-section" aria-label="Lista członków">
+      <div class="container">
+
+        <div class="results-meta">
+          <span id="count" role="status" aria-live="polite">Wyświetlono <strong>0</strong> z 0</span>
+          <span>Lista aktualna na dzień: <strong id="list-date">XX.XX.XXXX</strong></span>
+        </div>
+
+        <div class="member-grid" id="grid"></div>
+
+        <div class="empty" id="empty" hidden>
+          <strong>Brak wyników</strong>
+          <span>Nie znaleziono firmy o takiej nazwie. Spróbuj wpisać fragment nazwy.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!--FOOTER-->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__name">Stowarzyszenie Wielkopolski Klaster Teleinformatyczny</p>
+          <p>ul. Zwierzyniecka 20, 60-814 Poznań</p>
+          <dl class="footer__reg">
+            <div><dt>NIP:</dt><dd>7781462436</dd> &nbsp;·&nbsp; <dt>REGON:</dt><dd>300827291</dd> &nbsp;·&nbsp; <dt>KRS:</dt><dd>0000305486</dd></div>
+            <div><dt>Konto:</dt><dd>14 1610 1133 0083 1910 2000 0001 (SGB)</dd></div>
+          </dl>
+          <p class="footer__court">Stowarzyszenie zarejestrowane w Sądzie Rejonowym Poznań – Nowe Miasto i Wilda w Poznaniu, VIII Wydział Gospodarczy Krajowego Rejestru Sądowego.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Nawigacja w stopce">
+          <a href="index.html#o-klastrze">O klastrze</a>
+          <a href="index.html#dzialalnosc">Działalność</a>
+          <a href="czlonkowie.html">Członkowie</a>
+          <a href="index.html#dolacz">Dołącz do nas</a>
+          <a href="index.html#do-pobrania">Do pobrania</a>
+          <a href="index.html#kontakt">Kontakt</a>
+        </nav>
+      </div>
+      <p class="footer__bottom">© <span id="year">2026</span> Wielkopolski Klaster Teleinformatyczny. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
+
+
+  <script>
+    (function () {
+      var MEMBERS = [
+        { name: 'CzłonekA',  url: 'https://example.com/',  logo: null },
+        { name: 'CzłonekB',  url: 'https://example.com/',  logo: null },
+        { name: 'CzłonekC',  url: 'https://example.com/',  logo: null },
+        { name: 'CzłonekD',  url: 'https://example.com/',  logo: null },
+        { name: 'CzłonekE',  url: 'https://example.com/',  logo: null },
+        { name: 'CzłonekF',  url: 'https://example.com/',  logo: null },
+        { name: 'CzłonekG',  url: 'https://example.com/',  logo: null },
+        { name: 'CzłonekH',  url: 'https://example.com/',  logo: null },
+        { name: 'CzłonekI',  url: 'https://example.com/',  logo: null },
+        { name: 'CzłonekJ',  url: 'https://example.com/',  logo: null },
+        { name: 'CzłonekK',  url: 'https://example.com/',  logo: null },
+        { name: 'CzłonekL',  url: 'https://example.com/',  logo: null },
+        { name: 'CzłonekM',  url: 'https://example.com/',  logo: null },
+        { name: 'CzłonekN',  url: 'https://example.com/',  logo: null },
+        { name: 'CzłonekO',  url: 'https://example.com/',  logo: null },
+        { name: 'CzłonekP',  url: 'https://example.com/',  logo: null },
+        { name: 'CzłonekR',  url: 'https://example.com/',  logo: null },
+        { name: 'CzłonekS',  url: 'https://example.com/',  logo: null },
+        { name: 'CzłonekT',  url: 'https://example.com/',  logo: null },
+        { name: 'CzłonekU',  url: 'https://example.com/',  logo: null },
+        { name: 'CzłonekW',  url: 'https://example.com/',  logo: null },
+        { name: 'CzłonekY',  url: 'https://example.com/',  logo: null },
+        { name: 'CzłonekZ',  url: 'https://example.com/',  logo: null }
+      ];
+
+      var grid = document.getElementById('grid');
+      var empty = document.getElementById('empty');
+      var count = document.getElementById('count');
+      var input = document.getElementById('q');
+
+      /* alfabetycznie, z polskimi znakami */
+      MEMBERS.sort(function (a, b) { return a.name.localeCompare(b.name, 'pl'); });
+
+      /* normalizacja do wyszukiwania: małe litery, bez ogonków (ł → l) */
+      function norm(s) {
+        return s.toLowerCase().replace(/ł/g, 'l').normalize('NFD').replace(/[̀-ͯ]/g, '');
+      }
+      MEMBERS.forEach(function (m) { m._key = norm(m.name); });
+
+      function initials(name) { return name.replace(/[^\p{L}]/gu, '').slice(0, 2).toUpperCase(); }
+
+      function buildCard(m) {
+        var a = document.createElement('a');
+        a.className = 'member';
+        a.href = m.url;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+
+        var logo = document.createElement('span');
+        logo.className = 'member__logo';
+        if (m.logo) {
+          var img = document.createElement('img');
+          img.src = m.logo;
+          img.alt = 'Logo ' + m.name;
+          img.width = 160; img.height = 96;
+          logo.appendChild(img);
+        } else {
+          var ph = document.createElement('span');
+          ph.className = 'logo-ph';
+          ph.setAttribute('aria-hidden', 'true');
+          ph.textContent = initials(m.name);
+          logo.appendChild(ph);
+        }
+
+        var name = document.createElement('span');
+        name.className = 'member__name';
+        name.textContent = m.name;
+
+        var sr = document.createElement('span');
+        sr.className = 'sr-only';
+        sr.textContent = ' (strona członka, nowa karta)';
+        name.appendChild(sr);
+
+        var go = document.createElement('span');
+        go.className = 'member__go';
+        go.setAttribute('aria-hidden', 'true');
+        go.innerHTML = '<svg class="icon"><use href="#i-arrow-up-right"/></svg>';
+
+        a.appendChild(logo); a.appendChild(name); a.appendChild(go);
+        return a;
+      }
+
+      var cards = MEMBERS.map(function (m) {
+        var el = buildCard(m);
+        grid.appendChild(el);
+        return el;
+      });
+
+      function filter() {
+        var q = norm(input.value.trim());
+        var shown = 0;
+        MEMBERS.forEach(function (m, i) {
+          var match = !q || m._key.indexOf(q) !== -1;
+          cards[i].hidden = !match;
+          if (match) shown++;
+        });
+        count.innerHTML = 'Wyświetlono <strong>' + shown + '</strong> z ' + MEMBERS.length;
+        empty.hidden = shown !== 0;
+        grid.hidden = shown === 0;
+      }
+      input.addEventListener('input', filter);
+      filter();
+
+      /* ---------------- nagłówek i menu mobilne ---------------- */
+      var header = document.querySelector('.site-header');
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('site-nav');
+
+      function onScroll() { header.classList.toggle('is-scrolled', window.scrollY > 8); }
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      function setNav(open) {
+        nav.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+      }
+      toggle.addEventListener('click', function () {
+        setNav(toggle.getAttribute('aria-expanded') !== 'true');
+      });
+      nav.addEventListener('click', function (e) { if (e.target.closest('a')) setNav(false); });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { setNav(false); toggle.focus(); }
+      });
+      window.matchMedia('(min-width: 980px)').addEventListener('change', function () { setNav(false); });
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+      document.getElementById('list-date').textContent = new Date().getDate() + '.' + (new Date().getMonth() + 1) + '.' + new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
